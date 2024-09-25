@@ -30,7 +30,16 @@ console.log(howManyTimes(repeatedWords, "matter"));
 
 
 // Iteration 2 | Number Sequence
-function createSequence() {}
+function createSequence(n) {
+let finalSequence = []
+for(i = 0; i <= n; i++ ){
+finalSequence.push(i)
+
+}
+return finalSequence
+
+}
+console.log(createSequence(7));
 
 
 
