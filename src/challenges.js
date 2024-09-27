@@ -69,15 +69,20 @@ console.log(multiplyBy(numbers, 50));
 const original = ["cat", "dog", "fish", "bird", "cat", "fish"];
 const toRemove = ["cat", "dog"];
 
-function filterOut() {
+function filterOut(original, toRemove) {
+  const result = [];
 
-  if (toRemove===original){return original.splice()}
+  for (let i = 0; i < original.length; i++) {
+      if (!toRemove.includes(original[i])) {
+          result.push(original[i]);
+      }
+  }
 
+  return result;
 }
 
-console.log(original);
-
-
+const result = filterOut(original, toRemove);
+console.log(result);
 
 
 
