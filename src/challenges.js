@@ -81,6 +81,7 @@ function filterOut(original, toRemove) {
   return result;
 }
 
+
 const result = filterOut(original, toRemove);
 console.log(result);
 
