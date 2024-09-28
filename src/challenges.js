@@ -86,7 +86,6 @@ const result = filterOut(original, toRemove);
 console.log(result);
 
 
-
 // Iteration 5 | Unique Arrays
 const duplicateWords = [
   "crab",
@@ -102,10 +101,41 @@ const duplicateWords = [
   "bring"
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(wordsList){
+  const words = [];
+
+  if(wordsList.length === 0){
+    return null
+  }
+
+  for(let i = 0; i < wordsList.length; i++) {
+    console.log("inside for loop", i, wordsList[i]);
+
+      if(!words.includes(wordsList[i])){
+        words.push(wordsList[i])
+      }
+    }
+
+    return words
+  }
 
 
+console.log(uniquifyArray(duplicateWords))
 
+/*
+  function uniquifyArrayWithIndexOf(noDuplicateWords){
+    const words = [];
+
+  
+    for(let i = 0; i < noDuplicateWords.length;i++) {
+
+        if(words.indexOf(noDuplicateWords[i]) === -1){
+          words.push(duplicateWords[i])
+        }
+      }
+    return words
+    }
+*/
 
 // Bonus: Iteration 6 | Product of Adjacent Numbers
 const matrix = [
